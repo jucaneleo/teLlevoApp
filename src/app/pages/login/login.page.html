@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="transparent-header" >
+    <div class="logo">
+        <img  src="assets/logo-rounded.png"/>
+    </div>
+  <div>
+      <div class="ion-text-center">
+        <ion-label>Nombre de usuario</ion-label>
+      </div>
+    <ion-item class="ion-margin-top">
+      <ion-input type="text" placeholder="Username"></ion-input>
+    </ion-item>
+      <div class="ion-text-center ion-margin-top">
+        <ion-label>Contraseña</ion-label>
+      </div>
+    <ion-item class="ion-margin-top">
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+  </div>
+  <ion-button class="btn" [routerLink]="['/bienvenida']" color="warning" expand="block">Entrar</ion-button>
+
+</ion-content>
+
+
