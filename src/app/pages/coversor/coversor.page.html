@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons>
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>coversor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+  <ion-card-header color="warning">
+    <ion-card-subtitle>Como funciona?</ion-card-subtitle>
+    <ion-card-title>Explicacion de la app</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+      esta app permite que los alumnos se organicen para poder retornar a
+      sus hogares utilizando vehículos de algunos alumnos que si tienen movilización propia.
+  </ion-card-content>
+</ion-card>
+
+<ion-accordion-group>
+  <ion-accordion value="first">
+    <ion-item slot="header" color="light">
+      <ion-label>Conductores</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+        Los conductores pueden publicarse como disponibles para llevar gente
+    </div>
+  </ion-accordion>
+  <ion-accordion value="second">
+    <ion-item slot="header" color="light">
+      <ion-label>Pasajeros</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+        Los pasajeros pueden entrar a buscar conductores en la app
+    </div>
+  </ion-accordion>
+</ion-accordion-group>
+
+</ion-content>

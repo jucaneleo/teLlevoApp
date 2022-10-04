@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'About', url: 'about', icon: 'mail' },
-    { title: 'Bienvenida', url: 'bienvenida', icon: 'paper-plane' },
-    { title: 'Coversor', url: 'coversor', icon: 'heart' },
-    { title: 'Cerrar sesion', url: 'login', icon: 'heart' },
+    { title: 'Bienvenida', url: 'bienvenida', icon: 'heart' },
+    { title: 'Coversor', url: 'coversor', icon: 'paper-plane' },
+    { title: 'About', url: 'about', icon: 'paper-plane' },
+    { title: 'Cerrar sesion', url: 'login', icon: 'close' },
   ];
   constructor() {}
 }
