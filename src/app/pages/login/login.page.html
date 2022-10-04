@@ -1,3 +1,4 @@
+
 <ion-header>
   <ion-toolbar>
       <ion-title>Login</ion-title>
@@ -14,16 +15,16 @@
         <ion-label>Nombre de usuario</ion-label>
       </div>
     <ion-item class="ion-margin-top">
-      <ion-input type="text" placeholder="Username"></ion-input>
+      <ion-input type="text" required [(ngModel)]="user.name" placeholder="Username"></ion-input>
     </ion-item>
       <div class="ion-text-center ion-margin-top">
-        <ion-label>Contraseña</ion-label>
+        <ion-label  >Contraseña</ion-label>
       </div>
     <ion-item class="ion-margin-top">
-      <ion-input type="password" placeholder="Password"></ion-input>
+            <ion-input type="password" [(ngModel)]="user.password"  placeholder="Password"></ion-input>
     </ion-item>
   </div>
-  <ion-button class="btn" [routerLink]="['/bienvenida']" color="warning" expand="block">Entrar</ion-button>
+  <ion-button class="btn" (click)="login()" color="warning" expand="block">Entrar</ion-button>
 
 </ion-content>
 
