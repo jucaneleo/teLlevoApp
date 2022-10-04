@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { MenuController } from '@ionic/angular';
+import { IonRouterOutlet } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -20,12 +21,13 @@ export class LoginPage implements OnInit {
   field: string = '';
 
 
-  constructor(private toastCtrl: ToastController, private router: Router, private menu: MenuController) {
+  constructor(private toastCtrl: ToastController, private router: Router, private menu: MenuController, private routerOutlet: IonRouterOutlet) {
 
   }
 
   ngOnInit() {
       this.menu.enable(false)
+      this.routerOutlet.swipeGesture = false;
   }
 
   login(){
@@ -33,6 +35,7 @@ export class LoginPage implements OnInit {
       this.presentToast('Bienvenido ' + this.user.name);
       this.router.navigate(['/bienvenida']);
       this.menu.enable(true)
+      this.routerOutlet.swipeGesture = true;
     }
     else{
       this.presentToast('Debes ingresar: ' + this.field);
