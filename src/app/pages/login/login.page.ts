@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -19,17 +20,19 @@ export class LoginPage implements OnInit {
   field: string = '';
 
 
-  constructor(private toastCtrl: ToastController, private router: Router) {
+  constructor(private toastCtrl: ToastController, private router: Router, private menu: MenuController) {
 
   }
 
   ngOnInit() {
+      this.menu.enable(false)
   }
 
   login(){
       if(this.validateModel(this.user)){
       this.presentToast('Bienvenido ' + this.user.name);
       this.router.navigate(['/bienvenida']);
+      this.menu.enable(true)
     }
     else{
       this.presentToast('Debes ingresar: ' + this.field);
